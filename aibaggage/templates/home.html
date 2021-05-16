@@ -1,0 +1,20 @@
+<html>
+    <head>
+        
+    </head>
+<body>
+    {% block content %}
+    <!-- {% csrf_token %} -->
+        <!-- 
+            <br> -->
+        <!-- upload the image file<input type="file" name="file1" >
+
+        <input type="submit"> -->
+        <form action="files" method = "post" enctype="multipart/form-data">
+            {% csrf_token %}
+            upload the image file<input type="file" name="file1" />
+            upload the xml file<input type="file" name="file2" />
+        <input type="submit">
+        </form>
+        {% endblock %}
+</body>

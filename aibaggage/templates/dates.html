@@ -1,0 +1,16 @@
+<body>
+    {% block content %}
+    <!-- {% csrf_token %} -->
+        <!-- 
+            <br> -->
+        <!-- upload the image file<input type="file" name="file1" >
+
+        <input type="submit"> -->
+        <form action="report" method = "post" enctype="multipart/form-data">
+            {% csrf_token %}
+            enter start date <input type="date" name="start" />
+            enter end date<input type="date" name="end" />
+        <input type="submit">
+        </form>
+        {% endblock %}
+</body>
